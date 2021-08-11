@@ -31,5 +31,5 @@ Number.prototype.primeFactors = function() {
       }
     }
   }
-  return 
+  return resul;
 }
