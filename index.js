@@ -20,5 +20,16 @@ Number.prototype.isPrime = function() {
 };
 
 Number.prototype.primeFactors = function() {
-  
+  let result = {};
+  for (let i = 2; i < this / 2; i++) {
+    if (this % i === 0) {
+      result = (this/i).primeFactors();
+      if (result[i]) { 
+        result[i]++;
+      } else {
+        result[i] = 1;
+      }
+    }
+  }
+  return 
 }
