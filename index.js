@@ -33,3 +33,9 @@ Number.prototype.primeFactors = function() {
   }
   return result;
 }
+
+Number.prototype.factorCount = function() {
+  let result = 1;
+  for (const prime in this.primeFactors()) { result *= (this.primeFactors()[prime] + 1) };
+  return result;
+}
