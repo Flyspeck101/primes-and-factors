@@ -23,15 +23,7 @@ Number.prototype.primeFactors = function() {
   let result = {};
   for (let i = 2; i < this / 2; i++) {
     if (this % i === 0) {
-      for (const prime in this.primeFactors) {
-        if (!result[prime]) result[prime] = 0;
-        result[prime] += this.primeFactors[prime]
-      }
-      if (result[i]) { 
-        result[i]++;
-      } else {
-        result[i] = 1;
-      }
+      
     }
   }
   return result;
